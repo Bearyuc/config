@@ -1,0 +1,68 @@
+{
+    "acm": {
+        "prefix": "acm",
+        "body": [ 
+            "#include <bits/stdc++.h>",
+            "",
+            "int main()",  
+            "{", 
+            "\tstd::cin.tie(0)->std::ios::sync_with_stdio(false);",
+            "",
+            "\t$0",
+            "",
+            "\treturn 0;",
+            "}"
+        ]
+    },
+    "cf": {
+        "prefix": "cf",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "",
+            "using namespace std;",
+            "",
+            "#define x          first",
+            "#define y          second",
+            "#define el         '\\n'",
+            "#define bd         cerr << \"----------------------\" << el;",
+            "#define INF        0x7fffffff",
+            "#define inf        0x3f3f3f3f",
+            "#define MOD        1000000007",
+            "#define mod        998244353",
+            "#define eps        -2e9",
+            "#define sz(x)        ((int)(x).size())",
+            "#define all(x)       x.begin(), x.end()",
+            "#define rall(x)      x.rbegin(),x.rend()",
+            "#define ceil(a, b) (a + (b - 1)) / b",
+            "#define lowbit(x)  (x & (-x))",
+            "#define debug(x)   cerr << #x << \": \" << x << el;",
+            "",
+            "typedef long long ll;",
+            "typedef unsigned long long ull;",
+            "",
+            "ll gcd(ll a, ll b){return b ? gcd(b, a % b) : a;}",
+            "",
+            "int main()",
+            "{",
+            "    cin.tie(nullptr)->ios::sync_with_stdio(false);",
+            "    ",
+            "    int t;cin >> t;",
+            "    ",
+            "    auto sol = []() {",
+            "        $0",
+            "    };",
+            "",
+            "    while (t--) {sol();}",
+            "     ",
+            "    return 0;",
+            "}"
+        ]
+    },
+    "Mint": {
+		"prefix": "mint",
+		"body": [
+			"template <long long P>\nstruct ModInt\n{\npublic:\n\tModInt() : v(0) {}\n\ttemplate <typename T>\n\tModInt(T x) { v = ((long long)x % P + P) % P; }\n\tlong long val() const { return v; }\n\tModInt &operator++(){++v;if (v == P) v = 0;return *this;}\n\tModInt &operator--(){if (v == 0) v = P;--v;return *this;}\n\tModInt operator++(int){ModInt oldVal = *this;++*this;return oldVal;}\n\tModInt operator--(int){ModInt oldVal = *this;--*this;return oldVal;}\n\tModInt &operator+=(const ModInt &rhs){v += rhs.v;v %= P;return *this;}\n\tModInt &operator-=(const ModInt &rhs){v -= rhs.v;v = (v + P) % P;return *this;}\n\tModInt &operator*=(const ModInt &rhs){v *= rhs.v;v %= P;return *this;}\n\tModInt &operator/=(const ModInt &rhs) { return *this = *this * rhs.inv(); }\n\tModInt operator+() const { return *this; }\n\tModInt operator-() const { return ModInt() - *this; }\n\tModInt qpow(long long exp) const{\n\t\t// assert(exp>=0);\n\t\tModInt res = 1;\n\t\tModInt base = *this;\n\t\twhile (exp){\n\t\t\tif (exp & 1)\n\t\t\t\tres *= base;\n\t\t\tbase *= base;\n\t\t\texp >>= 1;\n\t\t}\n\t\treturn res;\n\t}\n\tModInt inv() const{/* assert(v);*/return qpow(P - 2);}\n\tfriend ModInt operator+(const ModInt &lhs, const ModInt &rhs){ModInt res = lhs;res += rhs;return res;}\n\tfriend ModInt operator-(const ModInt &lhs, const ModInt &rhs){ModInt res = lhs;res -= rhs;return res;}\n\tfriend ModInt operator*(const ModInt &lhs, const ModInt &rhs){ModInt res = lhs;res *= rhs;return res;}\n\tfriend ModInt operator/(const ModInt &lhs, const ModInt &rhs){ModInt res = lhs;res /= rhs;return res;}\n\tfriend bool operator==(const ModInt &lhs, const ModInt &rhs) { return lhs.v == rhs.v; }\n\tfriend bool operator!=(const ModInt &lhs, const ModInt &rhs) { return lhs.v != rhs.v; }\n\tfriend std::istream &operator>>(std::istream &is, ModInt &aim){long long tmp;is >> tmp;aim = ModInt(tmp);return is;}\n\tfriend std::ostream &operator<<(std::ostream &os, const ModInt &aim) { return os << aim.val(); }\n\nprivate:\n\tlong long v;\n};\nusing mint = ModInt<MOD>;\nconst int N = 2e5 + 10;\nmint fact[N];\nmint infact[N];\nvoid init(){\n\tinfact[0] = fact[0] = 1;\n\tfor(int i = 1;i<= N;i++)\n\t\tfact[i] = fact[i-1] * i , infact[i] = infact[i-1] / i;\n}\nmint C(int a,int b){\n\tif( a < b || a < 0 || b < 0 ) return 0;\n\t//    cout<<a<<\" \"<<b<<\" \"<<fact[a] * infact[b] * infact[a-b]<<\"\\n\";\n\treturn fact[a] * infact[b] * infact[a-b];\n}"			  
+		],
+		"description": "mint"
+	}
+}
