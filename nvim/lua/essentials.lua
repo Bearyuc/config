@@ -37,7 +37,7 @@ option.wildmenu = true
 option.pumheight = 10
 
 --系统剪贴板
---option.clipboard:append("unnamedplus")
+option.clipboard:append("unnamedplus")
 
 -- Buffer Settings --
 buffer.fileenconding = "utf-8"
